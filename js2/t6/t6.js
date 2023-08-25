@@ -1,4 +1,4 @@
-'use script';
+'use strict';
 
 const movies = [
   /*{title: 'No Country for Old Men', rating: '2'},
