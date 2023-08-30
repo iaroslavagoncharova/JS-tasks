@@ -808,11 +808,22 @@ function success(pos) {
     return etaisyysA - etaisyysB;
 
   })
+  ;
 
-  console.log(restaurants)
+  const table = document.querySelector('table');
 
-  // tulosta ravintolat html dokumenttiin
+  for (const restaurant of restaurants) {
+    const tr = document.createElement('tr');
+    const td1 = document.createElement('td');
+    td1.innerText = restaurant.name;
+
+    const td2 = document.createElement('td');
+    td2.innerText = restaurant.address;
+
+    tr.append(td1);
+    tr.append(td2);
+    table.append(tr);
+  }
 }
 
-
-navigator.geolocation.getCurrentPosition(success, error, options)
+navigator.geolocation.getCurrentPosition(success, error, options);

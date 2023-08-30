@@ -779,13 +779,12 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 for (let restaurant of restaurants) {
   const {coordinates} = restaurant.location;
-  const [lng, lat] = coordinates;
+  const [long, lat] = coordinates;
 
-  const marker = L.marker([lat, lng]).addTo(map);
+  const marker = L.marker([lat, long]).addTo(map);
 
   const popUp = `<h3>${restaurant.name}</h3>
-                <p>${restaurant.address}</p>
-  `;
+  <p>${restaurant.address}</p>`;
 
   marker.bindPopup(popUp);
 }
