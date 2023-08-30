@@ -818,7 +818,7 @@ function success(pos) {
     td1.innerText = restaurant.name;
 
     const td2 = document.createElement('td');
-    td2.innerText = restaurant.address;
+    td2.innerText = `${restaurant.address}, ${restaurant.postalCode}, ${restaurant.city}`;
 
     tr.append(td1);
     tr.append(td2);
